@@ -46,5 +46,39 @@ class ExpertTest {
 
 	@Test
 	void transformToRoman() {
+
+		String roman = transformToRoman(5);
+		String expected ="V";
+		Assertions.assertEquals(expected,roman);
+
 	}
+
+	@Test
+	void transformToRoman99() {
+
+		String roman = transformToRoman(99);
+		String expected ="XCIX";
+		Assertions.assertEquals(expected,roman);
+
+	}
+
+	@Test
+	void transformToRoman84() {
+
+		String roman = transformToRoman(84);
+		String expected ="LXXXIV";
+		Assertions.assertEquals(expected,roman);
+
+	}
+
+	@Test
+	void transformToRoman38() {
+
+		String roman = transformToRoman(84);
+		String expected ="XXXVIII";
+		Assertions.assertEquals(expected,roman);
+
+	}
+
+
 }
