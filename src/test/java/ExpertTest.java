@@ -12,7 +12,7 @@ class ExpertTest {
 	}
 
 	@Test
-	void testBackwardsString() {
+	void seperateString() {
 	}
 
 	@Test

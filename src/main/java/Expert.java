@@ -8,8 +8,7 @@ public class Expert {
 
 	};
 
-	public static Array backwardsString( String incoming) {
-
+	public static Array seperateString( String incoming) {
 	};
 
 	public int sumOfIntDigits(int incoming) {
