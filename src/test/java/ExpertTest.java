@@ -16,7 +16,7 @@ class ExpertTest {
 	@Test
 	void seperateString() {
 		String testString = "Hello,this,should,be,an,array";
-		String[] result = Expert.seperateString(testString);
+		String[] result = Expert.Expert.seperateString(testString);
 		String[] expected = new String[] {"Hello","this","should","be","an","array"};
 		Assertions.assertArrayEquals(expected, result);
 	}
@@ -24,7 +24,7 @@ class ExpertTest {
 	@Test
 	void seperateStringNothingToSepearte() {
 		String testString = "Hello this should be an array";
-		String[] result = Expert.seperateString(testString);
+		String[] result = Expert.Expert.seperateString(testString);
 		String[] expected = new String[] {"Hello this should be an array"};
 		Assertions.assertArrayEquals(expected, result);
 	}
