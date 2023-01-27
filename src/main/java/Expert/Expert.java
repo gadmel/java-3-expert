@@ -36,41 +36,35 @@ public class Expert {
 		return result;
 	}
 
-	public static int sumOfIntDigits(int incoming) {
-		String result = "";
-		int resultInt = 0;
-
+	public static int sumOfIntDigits(long incoming) {
+		int result = 0;
 		String[] split = String.valueOf(incoming).split("");
 
 		System.out.print("Cross sum of " + incoming + " is: ");
 
 		for (int i = 0; i < split.length; i++) {
-			result = split[i];
 			System.out.print(split[i]);
-
 			if (i < split.length - 1) {
 				System.out.print(" + ");
-				result = result + split[i];
-
 			}
 		}
 		System.out.print(" = ");
 
 		for (int i = 0; i < split.length; i++) {
-			resultInt = resultInt + Integer.parseInt(split[i]);
+			result = result + Integer.parseInt(split[i]);
 		}
 
 
-		if (resultInt > 9) {
-			System.out.println(resultInt);
+		if (result > 9) {
+			System.out.println(result);
 			System.out.println("Needs to be cross summed again");
-			sumOfIntDigits(resultInt);
+			return sumOfIntDigits(result);
 		}
 		else  {
-			System.out.println(resultInt);
-			return resultInt;
+			System.out.println(result);
+			return result;
 		}
-		return resultInt;
+
 
 	};
 

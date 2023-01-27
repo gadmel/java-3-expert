@@ -31,7 +31,17 @@ class ExpertTest {
 
 	@Test
 	void sumOfIntDigits() {
-
+		long testNumber = 569999999978L;
+		int result = Expert.Expert.sumOfIntDigits(testNumber);
+		int expected = 8;
+		Assertions.assertEquals(expected, result);
+	}
+	@Test
+	void sumOfIntDigitsWentWrong() {
+		long testNumber = 1;
+		int result = Expert.Expert.sumOfIntDigits(testNumber);
+		int expected = 1;
+		Assertions.assertEquals(expected, result);
 	}
 
 	@Test
