@@ -15,7 +15,7 @@ public class Expert {
 //
 //	};
 
-	public static String[] seperateString( String incoming) {
+	public static String[] seperateString(String incoming) {
 		// String[] result = incoming.split(",");
 		int startIndex = 0;
 		String[] result = new String[0];
@@ -54,7 +54,6 @@ public class Expert {
 			result = result + Integer.parseInt(split[i]);
 		}
 
-
 		if (result > 9) {
 			System.out.println(result);
 			System.out.println("Needs to be cross summed again");
@@ -68,8 +67,18 @@ public class Expert {
 
 	};
 
-	public String transformToRoman(int number){
-		return String.valueOf(number);
+	public static String transformToRoman(int number){
+		String[] roman = new String[] {"I","IV","V","IX","X","XL","L","XC","C","CD","D","CM","M"};
+		int[] arabic = new int[] {1,4,5,9,10,40,50,90,100,400,500,900,1000};
+		String result = "";
+		for (int i = arabic.length-1; i >= 0; i--) {
+			while (number >= arabic[i]) {
+				result = result + roman[i];
+				number = number - arabic[i];
+			}
+		}
+		System.out.println(result);
+		return result;
 
 	}
 

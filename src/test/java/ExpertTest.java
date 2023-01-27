@@ -1,3 +1,4 @@
+import Expert.Expert;
 import org.junit.jupiter.api.Assertions;
 
 import org.junit.jupiter.api.Test;
@@ -16,7 +17,7 @@ class ExpertTest {
 	@Test
 	void seperateString() {
 		String testString = "Hello,this,should,be,an,array";
-		String[] result = Expert.Expert.seperateString(testString);
+		String[] result = Expert.seperateString(testString);
 		String[] expected = new String[] {"Hello","this","should","be","an","array"};
 		Assertions.assertArrayEquals(expected, result);
 	}
@@ -24,7 +25,7 @@ class ExpertTest {
 	@Test
 	void seperateStringNothingToSepearte() {
 		String testString = "Hello this should be an array";
-		String[] result = Expert.Expert.seperateString(testString);
+		String[] result = Expert.seperateString(testString);
 		String[] expected = new String[] {"Hello this should be an array"};
 		Assertions.assertArrayEquals(expected, result);
 	}
@@ -32,14 +33,14 @@ class ExpertTest {
 	@Test
 	void sumOfIntDigits() {
 		long testNumber = 569999999978L;
-		int result = Expert.Expert.sumOfIntDigits(testNumber);
+		int result = Expert.sumOfIntDigits(testNumber);
 		int expected = 8;
 		Assertions.assertEquals(expected, result);
 	}
 	@Test
 	void sumOfIntDigitsWentWrong() {
 		long testNumber = 1;
-		int result = Expert.Expert.sumOfIntDigits(testNumber);
+		int result = Expert.sumOfIntDigits(testNumber);
 		int expected = 1;
 		Assertions.assertEquals(expected, result);
 	}
@@ -47,7 +48,7 @@ class ExpertTest {
 	@Test
 	void transformToRoman() {
 
-		String roman = transformToRoman(5);
+		String roman = Expert.transformToRoman(5);
 		String expected ="V";
 		Assertions.assertEquals(expected,roman);
 
@@ -56,7 +57,7 @@ class ExpertTest {
 	@Test
 	void transformToRoman99() {
 
-		String roman = transformToRoman(99);
+		String roman = Expert.transformToRoman(99);
 		String expected ="XCIX";
 		Assertions.assertEquals(expected,roman);
 
@@ -65,7 +66,7 @@ class ExpertTest {
 	@Test
 	void transformToRoman84() {
 
-		String roman = transformToRoman(84);
+		String roman = Expert.transformToRoman(84);
 		String expected ="LXXXIV";
 		Assertions.assertEquals(expected,roman);
 
@@ -74,8 +75,8 @@ class ExpertTest {
 	@Test
 	void transformToRoman38() {
 
-		String roman = transformToRoman(84);
-		String expected ="XXXVIII";
+		String roman = Expert.transformToRoman(84);
+		String expected ="LXXXIV";
 		Assertions.assertEquals(expected,roman);
 
 	}
