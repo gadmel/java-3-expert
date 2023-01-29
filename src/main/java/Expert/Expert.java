@@ -4,16 +4,20 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Expert {
-//	public static String backwardsString() {
-//
-//	};
-//	public static Array accendingArray(Array incoming) {
-//
-//	};
 
-//	public static Array backwardsString( String incoming) {
-//
-//	};
+	public static String backwardsString(String incoming) {
+		String result = "";
+		for (int i = incoming.length()-1; i >= 0; i--) {
+			result = result + incoming.charAt(i);
+		}
+		return result;
+	}
+
+	public static int[] accendingArray(int[] incoming) {
+		int[] result = incoming;
+		Arrays.sort(result);
+		return result;
+	}
 
 	public static String[] seperateString(String incoming) {
 		// String[] result = incoming.split(",");
